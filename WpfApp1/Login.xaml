@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Вход" Icon="Resources\db.png" Height="190" Width="356" FontSize="16" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid ShowGridLines="False">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBox materialDesign:HintAssist.Hint="Логин" Text="tax_admin" VerticalContentAlignment="Center" Grid.Row="0" 
+                 x:Name="loginT" Height="30" TextWrapping="NoWrap" FontSize="16" 
+                 VerticalAlignment="Center" HorizontalAlignment="Center" Width="230"/>
+        <PasswordBox materialDesign:HintAssist.Hint="Пароль" Password="admin" VerticalContentAlignment="Center" 
+                     Grid.Row="1" x:Name="passwordT" Height="30" Width="230" 
+                     FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button x:Name="autorization" Grid.Row="2" Content="Авторизироваться" 
+                VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="230" 
+                FontSize="16" Click="Button_Click"
+                Style="{StaticResource MaterialDesignRaisedButton}"/>
+        <ProgressBar x:Name="log_prog" Grid.Row="2" VerticalAlignment="Bottom" IsIndeterminate="True" Value="0"/>
+    </Grid>
+</Window>

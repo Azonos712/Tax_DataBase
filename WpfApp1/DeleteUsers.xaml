@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.DeleteUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        x:Name="mainwin" Icon="Resources\db.png" Title="Удаление пользователя" Height="191" Width="232" FontSize="16" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbx_login" HorizontalAlignment="Left" Height="30" Margin="10,44,0,0" Text="" VerticalAlignment="Top" Width="197"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Width="197" Click="Button_Click"/>
+    </Grid>
+</Window>

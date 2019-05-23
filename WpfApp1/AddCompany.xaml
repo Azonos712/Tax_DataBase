@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp1.AddCompany"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        x:Name="mainwin" Icon="Resources\db.png" Title="Добавление предприятия" Height="451.284" Width="205" FontSize="16" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="30" Margin="10,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" TabIndex="0"/>
+        <Label Content="Владелец" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbx_owner" TabIndex="1" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="168"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_phone" HorizontalAlignment="Left" Height="30" Margin="10,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" TabIndex="2"/>
+        <Label Content="Дата основания" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dp_date" DisplayDateStart="1/01/1950" DisplayDateEnd="1/01/2020" HorizontalAlignment="Left" Margin="10,252,0,0" VerticalAlignment="Top" Width="168" TabIndex="3"/>
+        <Label Content="Кол-во сотрудников" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_number" HorizontalAlignment="Left" Height="30" Margin="10,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" TabIndex="4"/>
+
+        <Button x:Name="btn_add" Content="Button" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click" TabIndex="5"/>
+    </Grid>
+</Window>  

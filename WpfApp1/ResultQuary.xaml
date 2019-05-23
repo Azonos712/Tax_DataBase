@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp1.ResultQuary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Результат" Icon="Resources\db.png"  Height="470" Width="820" FontSize="16" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="ResGrid" materialDesign:DataGridAssist.CellPadding="5 3 3 3" materialDesign:DataGridAssist.ColumnHeaderPadding="5 3 3 3" IsReadOnly="True" ItemsSource="{Binding}" AutoGenerateColumns="True" AutoGeneratingColumn="OnAutoGeneratinngColumn" HorizontalAlignment="Center" Height="401" Width="774" VerticalAlignment="Center"  Margin="10"/>
+
+        <ProgressBar x:Name="log_prog" VerticalAlignment="Bottom" IsIndeterminate="True" Value="0"/>
+       
+        <Grid x:Name="diagr" Margin="10">
+            <chartingToolkit:Chart Margin="0,0,0,0" Title="Количество платежей каждого сотрудника" TextElement.Foreground="Red">
+                <chartingToolkit:PieSeries ItemsSource="{Binding Mode=OneWay}" DependentValuePath="Share" IndependentValuePath="Name" DataContext="{Binding Mode=OneWay}">
+                </chartingToolkit:PieSeries>
+            </chartingToolkit:Chart>
+        </Grid>
+    
+    </Grid>
+</Window>

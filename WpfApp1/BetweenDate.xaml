@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.BetweenDate"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        x:Name="mainwin" Icon="Resources\db.png" Title="Даты" Height="256" Width="213" FontSize="16" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="lbl_name1" Content="После" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+        <DatePicker x:Name="dp_date1" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="168" TabIndex="0"/>
+        <Label x:Name="lbl_name2" Content="До" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dp_date2" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="168" TabIndex="1"/>
+
+        <Button x:Name="btn_add" Content="Продолжить" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click" TabIndex="2"/>
+    </Grid>
+</Window>
